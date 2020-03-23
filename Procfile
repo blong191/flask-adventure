@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn adventure:create_app()
