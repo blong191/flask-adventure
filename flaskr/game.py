@@ -30,6 +30,8 @@ def start():
             return redirect(url_for('game.campfire'))
         elif choice == 'die':
             return redirect(url_for('game.death'))
+        else:
+            current_scene['output']= current_scene['output'] + "what"
     return render_template('play.html',scene=current_scene)
 
 @bp.route('/death', methods=( 'GET','POST'))
