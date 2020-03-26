@@ -7,3 +7,7 @@ bp = Blueprint('game', __name__)
 @bp.route('/')
 def index():
     return render_template('game.html')
+
+@bp.route('/start')
+def start():
+    return render_template('play.html')
