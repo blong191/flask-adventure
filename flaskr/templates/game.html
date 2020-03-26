@@ -1,0 +1,18 @@
+<!doctype html>
+
+<head>
+
+<title> EXITO Magice </title>
+<link rel="stylrsheet" href="{{ url_for('static', filename='styles.css') }}"
+
+</head>
+<body>
+<h1> EXITO MAGICE</h1>
+{% block content %}
+<section class="game">
+
+  <a href="{{ url_for('scenes.start') }}" class='start'>Start game</a>
+
+</section>
+{% endblock %}
+</body>

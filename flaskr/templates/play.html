@@ -1,0 +1,15 @@
+{% extends 'game.html'%}
+
+{%block content%}
+
+<h2 class='place'>{{ scene[place] }}</h2>
+
+<p class='output'>{{ scene[output] }}</p>
+
+<form method='POST'>
+  <label for='action'> Type an action.</label>
+  <input type='input' name='action' id='action'>
+  <input type='submit' value='Submit'>
+</form>
+
+{% endblock %}
