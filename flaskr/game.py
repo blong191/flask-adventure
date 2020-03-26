@@ -29,7 +29,7 @@ def start():
         if choice == 'skip':
             return redirect(url_for('game.campfire'))
         elif choice == 'die':
-            return redirect(url_for('gmae.death'))
+            return redirect(url_for('game.death'))
     return render_template('play.html',scene=current_scene)
 
 @bp.route('/death', methods=( 'GET','POST'))
@@ -38,7 +38,7 @@ def death():
     'place':'hell',
     'output': 'GET good ... retry (You have to refresh)'
     }
-
+    return render_template('play.html', scene=current_scene)
 @bp.route('/campfire', methods=('GET','POST'))
 def campfire():
     current_scene = {
